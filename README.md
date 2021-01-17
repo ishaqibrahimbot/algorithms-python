@@ -7,3 +7,4 @@ This repository contains all the algorithms I implemented in Python while taking
 ### Merge Sort
 ### Counting Inversions
 ### Karatsuba Multiplication
+### Closest Pair
