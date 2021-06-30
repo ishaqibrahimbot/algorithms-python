@@ -14,7 +14,7 @@ import numpy as np
 import time
 
 
-A = np.random.randint(1, 100000000, 50000)
+A = np.random.randint(1, 100000000, 100000)
 A = list(A)
 
 def merge_sort(array_A):
@@ -60,8 +60,8 @@ def merge_sort(array_A):
 
         return A_sorted
 
-a = time.time()
-x = merge_sort(A)
-b = time.time()
+# a = time.time()
+# x = merge_sort(A)
+# b = time.time()
 
-print("Time taken to merge sort = {}".format(b-a))
+# print("Time taken to merge sort = {}".format(b-a))

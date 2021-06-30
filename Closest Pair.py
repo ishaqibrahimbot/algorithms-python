@@ -164,31 +164,26 @@ def closest_pair(Px):
 # print("Time taken = {}".format(d-c))
 
 num_array = []
-closest_pair_time = []
-brute_force_time = []
 
-for num in range(10, 10000):
+for num in range(10, 50):
     points = []
     num_array.append(num)
     for i in range(num):
         points.append((random.randint(-num, num), random.randint(-num, num)))
 
-    Px = merge_sort_points(points, 0)
-    a = time.time()
-    pair, dist = closest_pair(Px)
-    b = time.time()
-    closest_pair_time.append(b-a)
+Px = merge_sort_points(points, 0)
+a = time.time()
+pair, dist = closest_pair(Px)
+b = time.time()
+closest_pair_time = b-a
 
-    c = time.time()
-    pair_2, dist_2 = brute_force(Px)
-    d = time.time()
-    brute_force_time.append(d-c)
+c = time.time()
+pair_2, dist_2 = brute_force(Px)
+d = time.time()
+brute_force_time = d - c
 
-    plt.plot(num_array, closest_pair_time)
-    plt.plot(num_array, brute_force_time)
-    plt.show()
-
-
+print(f"Time taken by closest pair: {closest_pair_time}")
+print(f"Time taken by brute force: {brute_force_time}")
 
 
 
